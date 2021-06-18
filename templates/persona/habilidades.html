@@ -1,0 +1,12 @@
+<h1>Lista de Habilidades de Empleados</h1>
+<form method="get">{% csrf_token %}
+    <input type="number" id="idempleado" name="idempleado" placeholder="Ingrese el id aquí">
+    <button type="submit">Buscar</button>
+</form>
+<ul>
+    
+    {% for h in habilidades %}
+        <li> {{ h }}</li>
+    {% endfor %}
+        
+</ul>
